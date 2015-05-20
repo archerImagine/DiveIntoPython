@@ -7,3 +7,4 @@ This repo is for the notes from the book [Dive Into Python](http://www.diveintop
 2. [Chapter 02 | The First Python Program ](Chapter_02/ReadMe.md)
 3. [Chapter 03 | Native Datatypes ](Chapter_03/ReadMe.md)
 4. [Chapter 04 | The Power of Introspection ](Chapter_04/ReadMe.md)
+5. [Chapter 05 | Object and Object Orientation ](Chapter_05/ReadMe.md)
