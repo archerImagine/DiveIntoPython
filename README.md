@@ -9,3 +9,4 @@ This repo is for the notes from the book [Dive Into Python](http://www.diveintop
 4. [Chapter 04 | The Power of Introspection ](Chapter_04/ReadMe.md)
 5. [Chapter 05 | Object and Object Orientation ](Chapter_05/ReadMe.md)
 6. [Chapter 06 | Exceptions and File Handling ](Chapter_06/ReadMe.md)
+7. [Chapter 07 | Regular Expression ](Chapter_07/ReadMe.md)
