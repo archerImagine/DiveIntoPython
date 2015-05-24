@@ -11,3 +11,4 @@ This repo is for the notes from the book [Dive Into Python](http://www.diveintop
 6. [Chapter 06 | Exceptions and File Handling ](Chapter_06/ReadMe.md)
 7. [Chapter 07 | Regular Expression ](Chapter_07/ReadMe.md)
 8. [Chapter 08 | HTML Processing ](Chapter_08/ReadMe.md)
+9. [Chapter 09 | XML Processing ](Chapter_09/ReadMe.md)
