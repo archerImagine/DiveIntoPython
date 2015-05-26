@@ -72,3 +72,28 @@ So **Python** is
 
 * Dynamically Typed Language &
 * Strongly Typed Languages.
+
+## Documenting Function ##
+
+Document the code is golden rule, and Python has this in its core, Python provides a way to document a Function as shown below.
+
+````
+def buildConnectionString(param):
+    """ Build a connection string from a dictionary of parameters.
+        Returns a String.
+    """
+````
+
+EveryThing between the `""" """` triple quotes is a doc string, even the carriage returns and the New Line is preserved. We can use both the single and double quotes inside this triple quotes.
+
+We can get this doc string by these two techniques, mentioned in a [StacOverflow question.](http://stackoverflow.com/questions/713138/getting-the-docstring-from-a-function)
+
+````
+example.buildConnectionString.__doc__
+
+help(example.buildConnectionString)
+````
+
+In both the case, the output will be similar, but with a little formatting difference.
+
+This Doc string can also be used as a ToolTip for IDE.
