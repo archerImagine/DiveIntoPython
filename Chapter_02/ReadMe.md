@@ -123,4 +123,20 @@ Lets see the details of each line of code.
 * To use methods, classes etc from the imported modules, we should use the format `moduleName.function `, in the above case `moduleName` := `example01 ` and `function ` : `buildConnectionString`
 * Finally we invoked an attribute on the function `buildConnectionString` called `__doc__`.
 
+### The `import ` search path ###
 
+Since we have seen importing a module, it is good to know from where all path in the file system can python pick these modules. This can be found out by executing this simple command.
+
+````python
+import sys
+print sys.path
+
+sys.path.append('/my/new/path')
+````
+
+Few things to note from above code.
+
+* Importing a modules makes all its functions and attributes available.
+* `sys.path` is a list of directory names which forms the search path.
+* All modules are not in `.py` file, few like `sys` modules are built in modules which a made in **C**.
+* We can change the system path by the command `sys.path.append `, till python is running.
