@@ -140,3 +140,13 @@ Few things to note from above code.
 * `sys.path` is a list of directory names which forms the search path.
 * All modules are not in `.py` file, few like `sys` modules are built in modules which a made in **C**.
 * We can change the system path by the command `sys.path.append `, till python is running.
+
+### What's an Object ###
+
+Why we say everything is an object in Python. So the arguments rests on the definition of the word **object**.
+
+Some programming considers an object to have just methods and attributes. Some may want the classes can be sub classed.
+
+In python neither are the cases, because there are exception to both above rules.
+
+So in python something is an object because it can be assigned to a variable, or passed as an arguments to a function.
