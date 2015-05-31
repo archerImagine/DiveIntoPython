@@ -14,3 +14,4 @@ This repo is for the notes from the book [Dive Into Python](http://www.diveintop
 9. [Chapter 09 | XML Processing ](Chapter_09/ReadMe.md)
 10. [Chapter 10 | Scripts and Streams ](Chapter_10/ReadMe.md)
 11. [Chapter 11 | HTTP Web Services ](Chapter_11/ReadMe.md)
+12. [Chapter 12 | SOAP Web Services ](Chapter_12/ReadMe.md)
