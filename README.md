@@ -18,3 +18,4 @@ This repo is for the notes from the book [Dive Into Python](http://www.diveintop
 13. [Chapter 13 | Unit Testing ](Chapter_13/ReadMe.md)
 14. [Chapter 14 | Test First Programming ](Chapter_14/ReadMe.md)
 15. [Chapter 15 | Refactoring ](Chapter_15/ReadMe.md)
+16. [Chapter 16 | Functional Programming ](Chapter_16/ReadMe.md)
