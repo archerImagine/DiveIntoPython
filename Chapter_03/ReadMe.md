@@ -46,6 +46,32 @@ Here are some operation on the sample dictionary which we already have named `di
     - Dictionary **values** can be integers, string, objects, or even other dictionary.
     - Dictionary **Key** are more restrictive, they can be strings, integers and few others, basically it should be immutable.
 
+### Deleting Items from Dictionary ###
+
+Consider the below example:-
+
+````python
+dictionary = {
+    'server':'mpilgrim',
+    'database':'pubs',
+    "uid":'sa',
+    'retrycount':3,
+    42:'douglas'
+}
+
+print "dictionary : ", dictionary
+
+del dictionary[42]
+print "dictionary : ", dictionary
+
+dictionary.clear()
+print "dictionary : ", dictionary
+````
+* We can delete a particular element of the dictionary, by using its key as shown here.
+    - `del dictionary[42]`
+* We can also remove all the elements with the help of `clear()` method of dictionary, but the empty dictionary will still remain.
+    - `dictionary.clear()`
+
 
 
 
