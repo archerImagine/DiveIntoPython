@@ -166,3 +166,22 @@ print "li = ", li, " len(li) = ", len(li), " li[-1] = ", li[-1]
     - `append()` also takes one arguments, though not restricted only to list.
     - It simply adds it to the end of the original list.
     - Now as we see in the above example, we have a final list with 4 elements, because we appended a list itself not elements of the list.
+
+### Searching Lists. ###
+
+We can search for a element in a list with `index ` function and also `in` operator.
+
+````python
+li = ['a', 'b', 'new', 'mpilgrim', 'z', 'examples', 'new', 'two', 'element']
+
+print "li.index('examples'): ", li.index('examples')
+print "li.index('new'): ", li.index('new')
+print '"c" in li : ', "c" in li
+
+print "li.index('c'): ", li.index('c')
+````
+
+* `index()`
+    - It finds the first occurrence of an element, so in case of `index('new')`, it will return 2, though we have another `"new"`.
+    - If a value is not found, it raise a `ValueError.`
+    - To test if a element is in a list or not we use the `in` operator.
