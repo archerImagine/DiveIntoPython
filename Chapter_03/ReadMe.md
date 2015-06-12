@@ -185,3 +185,25 @@ print "li.index('c'): ", li.index('c')
     - It finds the first occurrence of an element, so in case of `index('new')`, it will return 2, though we have another `"new"`.
     - If a value is not found, it raise a `ValueError.`
     - To test if a element is in a list or not we use the `in` operator.
+
+### Deleting list elements ###
+
+Here is an example of Deleting list elements:-
+
+````python
+li = ['a', 'b', 'new', 'mpilgrim', 'z', 'examples', 'new', 'two', 'element']
+print "Original Li = ", li
+
+print "li.remove('z') : ", li.remove('z'), "li: ", li
+print "li.remove('new') : ", li.remove('new'), "li: ", li
+print "li.pop() : ", li.pop(), "li: ", li
+print "li.remove('c') : ", li.remove('c'), "li: ", li
+````
+* `remove()`
+    - `remove()`, removes the first matching elements from the list.
+    - `remove()`, just like `index()` raises a `ValueError` if we invoke it with arguments which is not present in the list.
+* `pop()`
+    - It removes the last element from the list, and returns that element.
+
+
+
