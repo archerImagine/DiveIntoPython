@@ -205,5 +205,25 @@ print "li.remove('c') : ", li.remove('c'), "li: ", li
 * `pop()`
     - It removes the last element from the list, and returns that element.
 
+### Using List Operators ###
 
+* A list can be concatenated using `+` operator which is similar to `extend()`
+* `+=` also has the same behavior as `+`
+* `*` works as a list repeater.
+
+Here is an example:-
+
+````python
+li = ['a', 'b', 'mpilgrim']
+print "li = ", li
+
+li = li + ['example', 'new']
+print "After adding ['example', 'new'], li = ", li
+
+li += ['two']
+print "After adding ['two'], li = ", li
+
+li = [1, 2] * 3
+print "li = ", li
+````
 
