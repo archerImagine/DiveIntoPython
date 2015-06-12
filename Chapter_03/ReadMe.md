@@ -72,10 +72,58 @@ print "dictionary : ", dictionary
 * We can also remove all the elements with the help of `clear()` method of dictionary, but the empty dictionary will still remain.
     - `dictionary.clear()`
 
+## Introducing Lists. ##
+A list is more like a array in some other languages, but capable of holding heterogeneous elements in it. `ArrayList` of Java comes close to a List.
 
+A list has these properties.
 
+* A list is dynamic, i.e. it can be updated anytime.
+* It can hold any type of objects in it.
 
+### Defining List ###
 
+We can define a list as shown below.
 
+````python
+li = ['a', 'b', 'mpilgrim', 'z', 'examples']
+````
 
+Since a List is like an array we can also do index based operation on the list, and just like some arrays, the list's index begins at `0`.
 
+So here are some examples to access the list.
+
+````python
+print li[0]     # prints 'a'
+print li[4]     # prints 'examples'
+````
+
+Since the index is a number we can also use **negative index**, when we use negative index, it just subtracts that number from the length of the list and gives the element at that index.
+
+````python
+print li[-3]     # prints 'mpilgrim' length of list = 5, so 5 - 3 = 2, li[2] = 'mpilgrim'
+print li[-1]     # prints 'examples', length of list = 5, so 5 - 1 = 4, li[4] = 'example'
+````
+
+### Slicing a list ###
+
+We can always get a sub list from the actual list. This sublist is called **Slice**. This done by suppling two indices. The return values is a new list, containing elements from the first slice index, upto the second index, not including it.
+
+let see some example:-
+
+````python
+li = ['a', 'b', 'mpilgrim', 'z', 'examples']
+
+print "li[1:3] : ", li[1:3]         # prints ['b', 'mpilgrim']
+print "li[1:-1] : ", li[1:-1]       # prints ['b', 'mpilgrim', 'z']
+print "li[0:3] : ", li[0:3]         # prints ['a', 'b', 'mpilgrim']
+````
+
+This is how slicing can be understood.
+
+* While reading the list from left to right, the first slice index tells us about the first element which we want, and the second slice index tells us the first element which you do not want.
+
+Some short hand about slice.
+
+* if any of the slice has to start at `0` index, you can leave the index, ex. `li[:3]` = `li[0:3]`
+* similarly if the slice has to extend till the last element. `li[3:]` = `li[3:5]`
+* If we want complete slice of the list, `li[:]`
