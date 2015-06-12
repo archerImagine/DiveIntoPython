@@ -126,4 +126,43 @@ Some short hand about slice.
 
 * if any of the slice has to start at `0` index, you can leave the index, ex. `li[:3]` = `li[0:3]`
 * similarly if the slice has to extend till the last element. `li[3:]` = `li[3:5]`
+    - On important thing to note is if we do a slice like these 
+        + `li[:n]` - Will return the first n elements.
+        + `li[n:]` - Will return the rest.
 * If we want complete slice of the list, `li[:]`
+
+### Adding Element to the list. ###
+Here are some Apis from List, which we can use to add elements to the list.
+
+* `append()`
+    - `li.append('new')` : this is add the element `new` at the end of the list `li`
+* `insert()`
+    - `li.insert(2,'new') ` : this will add the element `new ` at the index `2` in the list `li`
+    - We can have duplicate elements in a list.
+* `extend()`
+    - `li.extend(['two', 'element'])` : `extend()` takes a single argument which is a list, and it concatenates the argument list with `li`
+
+Now we might see, what is the difference between `append()` and `extend()`
+Here is a example of `extend()`
+
+````python
+li = ['a','b','c']
+li.extend(['d','e','f'])
+print "li = ", li, " len(li) = ", len(li), " li[-1] = ", li[-1]
+````
+
+* `extend()`
+    - `extend ` takes a single arguments which is a list, and adds each of the elements to the original list.
+    - In the above example, the final list will have 6 elements.
+
+
+Here is an example of `append()`
+````python
+li = ['a','b','c']
+li.append(['d','e','f'])
+print "li = ", li, " len(li) = ", len(li), " li[-1] = ", li[-1]
+````
+* `append()`
+    - `append()` also takes one arguments, though not restricted only to list.
+    - It simply adds it to the end of the original list.
+    - Now as we see in the above example, we have a final list with 4 elements, because we appended a list itself not elements of the list.
