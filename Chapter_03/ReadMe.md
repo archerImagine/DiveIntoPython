@@ -227,3 +227,29 @@ li = [1, 2] * 3
 print "li = ", li
 ````
 
+## Introducing Tuple ##
+
+A Tuple is a immutable list.A tuple cannot be changes once it is created.
+
+A tuple is defines exactly like a list, with just the exception that we use `()` brackets.
+
+````python
+t =('a','b','mpilgrim','z','example')
+print "t[0]: ", t[0]
+print "t[-1]: ", t[-1]
+print "t[1:3]: ", t[1:3]
+````
+
+* Tuple also have a order just like list, and they are 0 indexed.
+* Negative index, counts from the end of the list.
+* Slicing is also same as list.
+* Tuple have no methods.
+* We cannot add, remove, find element in a tuple.
+* We can check for presence of an element in a tuple with use of `in` operator.
+
+So with so many disadvantages with is the real advantages of tuples.
+
+* Tuples are very fast.
+* It is one way to make anything write protected.
+* Dictionary can have tuple as a key but not list, even with tuple, these tuple cannot be keys. Any tuple with can be considered unsafe cannot be the key.
+    - A tuple of list.
