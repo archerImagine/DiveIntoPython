@@ -292,3 +292,49 @@ We can also get the functionality of `enum `s in C in python, by doing this.
 `(MONDAY,TUESDAY,WEDNESDAY,THRUSDAY,FRIDAY,SATURDAY,SUNDAY) = range(7)`
 
 We can use this concept of tuple been returned in function to return multiple values, which we can then assign to same variable or multiple variable.
+
+
+## Formatting Strings ##
+
+Python supports formatting values to string. There can be very complicated uses case for this, but the most simplest use is by the `%` operator.
+
+Here is an example for the same.
+
+````python
+k = 'uid'
+v = 'sa'
+
+print "%s = %s" %(k,v)  # Prints uid = sa
+````
+
+The string `"%s = %s" %(k, v)` is what we will concentrate, the first `%s` gets its value from `k` in the tuple `(k, v)`, and the second `%s`, gets its value from `v`.
+
+The above is a example of [type coercion ](https://tapestry.apache.org/type-coercion.html).
+
+The above case of string formating might look like a little too much which can be simply achieved by string concatenation. This is not the case, consider the below example.
+
+````python
+uid = "sa"
+pwd = "secret"
+
+print pwd + " is not a good password for " +uid
+print "%s is not a good password for %s" %(pwd,uid)
+
+userCount = 6
+print "User Connected %d" %(userCount, )
+print "User Connected " +userCount
+````
+
+Everything is fine when we are using string, but once we have an integer, all hell break loose if we use the `+` operator, as it gives a type error `TypeError: cannot concatenate 'str' and 'int' objects`
+
+So the String formating using the `%` operator is far more than just string concatenation. It can work with floats, integers and strings.
+
+So here are the strings which should follow `%` for different data types.
+
+| string | Value    |
+| :----: | :----    |
+| `s`    | strings  |
+| `d`    | integers |
+| `f`    | float    |
+
+
