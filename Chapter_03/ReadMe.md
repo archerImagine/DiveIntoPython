@@ -253,3 +253,42 @@ So with so many disadvantages with is the real advantages of tuples.
 * It is one way to make anything write protected.
 * Dictionary can have tuple as a key but not list, even with tuple, these tuple cannot be keys. Any tuple with can be considered unsafe cannot be the key.
     - A tuple of list.
+
+
+## Declaring Variables. ##
+
+Python has both global and local variables, but they do not have an explicit declaration. Variables comes into existence when they are assigned values, and destroyed when they go out of scope.
+
+Here is an example of variable declaration:-
+
+````python
+if __name__ == '__main__':
+    myParam = {\
+    "server":"mpilgrim",\
+    "database":"master",\
+    "uid":"sa",\
+    "pwd":"secret"\
+    }
+````
+
+As shown above, we have a variable declared as `myParam`, so when we use line continuation character, `\`, the next line can be indented as we wish, there is not hard bound on the formating.
+
+Expression within brackets, any form can be split over multiple line with out taking care of the indentation.
+
+We cannot reference a variable till we have assigned value to it, it raise a error `NameError`.
+
+We can also assign multiple values at once in python. This is shown below.
+
+````python
+v = ('a','b','c','d')
+print "v = ", v
+
+(x,y,z,u) = v
+print "x = ", x, " y = ", y, " z = ", z, " u = ", u
+````
+
+We can also get the functionality of `enum `s in C in python, by doing this.
+
+`(MONDAY,TUESDAY,WEDNESDAY,THRUSDAY,FRIDAY,SATURDAY,SUNDAY) = range(7)`
+
+We can use this concept of tuple been returned in function to return multiple values, which we can then assign to same variable or multiple variable.
