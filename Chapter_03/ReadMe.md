@@ -337,4 +337,85 @@ So here are the strings which should follow `%` for different data types.
 | `d`    | integers |
 | `f`    | float    |
 
+## Mapping List ##
 
+If there is any feature in Python, which makes me fall in love with it, its is List Comprehension or Mapping List.
+
+List Comprehension provides a way of mapping a list into another list, by applying a function on each of the element of original list.
+
+Here is an example of list comprehension in action.
+
+````python
+li = [1, 9, 8, 4]
+print "li = ", li
+
+print [elem*2 for elem in li]
+
+li = [elem*2 for elem in li]
+print "li = ", li
+````
+
+To understand this expression `[elem*2 for elem in li]`, we should start for right to left.
+* `for elem in li`, this takes each element from `li` and puts the value in `elem`
+* `elem*2` for each element `elem` we multiply it by `2` and store it in the new list.
+
+Few Points about List Comprehension.
+* List Comprehension does not modify the original list.
+* We can even assign the List Comprehension output to the original list, because the new list is created in memory, and once the complete list is created it will be assigned to original list, so we will not reach a infinite loop.
+
+We can also use List Comprehension on Dictionary not only limited to List. Consider the `buildConnectionString()` and in particular this line, `["%s = %s" % (k, v) for k, v in param.items()]`
+
+So before we understand the above code, we have to understand these methods of dictionary.
+
+* `keys()`
+    - The `keys` method of a dictionary returns a list of all the keys of dictionary. The list is not in the order in which the dictionary was defined.
+* `values()`
+    - The `values` method of a dictionary returns a list of all the values of dictionary. The list is in order of return of `keys`, so we can say `param.values()[n] == param[param.keyes()[n]]`
+* `items()`
+    - The `items` method of a dictionary returns a list of the form `(key, value)`. 
+
+To understand we can see the below code.
+
+````python
+myParam = {\
+    "server":"mpilgrim",\
+    "database":"master",\
+    "uid":"sa",\
+    "pwd":"secret"\
+}
+
+print "myParam.keys() = ", myParam.keys()
+print "myParam.values() = ", myParam.values()
+print "myParam.items() = ", myParam.items()
+````
+
+This is the output:- 
+
+````python
+myParam.keys() =  ['pwd', 'database', 'uid', 'server']
+myParam.values() =  ['secret', 'master', 'sa', 'mpilgrim']
+myParam.items() =  [('pwd', 'secret'), ('database', 'master'), ('uid', 'sa'), ('server', 'mpilgrim')]
+````
+
+Here is a step by step process of what we try to achieve in this line of code.
+
+* `["%s = %s" % (k, v) for k, v in param.items()]`
+
+````python
+myParam = {\
+    "server":"mpilgrim",\
+    "database":"master",\
+    "uid":"sa",\
+    "pwd":"secret"\
+}
+
+print "myParam.items(): ", myParam.items(), " len: ", len(myParam.items())
+
+key = [k for k,v in myParam.items()]
+values = [v for k,v in myParam.items()]
+keyValue = ["%s = %s" %(k,v) for k,v in myParam.items()]
+
+print "myParam.key(): ", key, " len: ", len(key)
+print "myParam.values(): ", values, " len: ", len(values)
+print "myParam.keyValue(): ", keyValue, " len: ", len(keyValue)
+````
