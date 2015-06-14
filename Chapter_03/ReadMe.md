@@ -419,3 +419,34 @@ print "myParam.key(): ", key, " len: ", len(key)
 print "myParam.values(): ", values, " len: ", len(values)
 print "myParam.keyValue(): ", keyValue, " len: ", len(keyValue)
 ````
+
+## Joining List and splitting Strings ##
+
+We can join each element of a list, using a delimiter, by the use of `join()` method.
+
+Here is the most simplest example:-
+
+````python
+li = ['a','b','c','d']
+print ";".join(li)      # prints a;b;c;d
+````
+
+Similarly if we look into the `buildConnectionString` function we will find this code:-
+
+* `";".join(["%s = %s" % (k, v) for k, v in param.items()])`
+
+So `";"` is a string object and we are invoking the `join()` method on it.
+
+Similar to joining element of a list, we also have a `split ` method, which will split a string into a list using a delimiter.
+
+Here is the example for performing both `join()` and `split()`
+
+````python
+li = ['pwd = secret', 'database = master', 'uid = sa', 'server = mpilgrim']
+s = ";".join(li)
+print "String = ", s
+liNew = s.split(";")
+print "liNew: ", liNew
+````
+
+* `split()` has an optional argument which is a integer, which tells how many splits to performs.
