@@ -20,3 +20,4 @@ This repo is for the notes from the book [Dive Into Python](http://www.diveintop
 15. [Chapter 15 | Refactoring ](Chapter_15/ReadMe.md)
 16. [Chapter 16 | Functional Programming ](Chapter_16/ReadMe.md)
 17. [Chapter 17 | Dynamic Functions ](Chapter_17/ReadMe.md)
+18. [Chapter 18 | Performance Tuning ](Chapter_18/ReadMe.md)
