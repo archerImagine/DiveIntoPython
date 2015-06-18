@@ -114,5 +114,7 @@ print "Len: ", len(dir(os)), " dir(os): ", dir(os)
     - methods.
 
 
+
 ### The `callable ` function. ###
 The `callable ` function take any object and returns `True ` if the object can be called.
+
