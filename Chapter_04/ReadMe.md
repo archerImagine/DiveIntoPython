@@ -118,3 +118,22 @@ print "Len: ", len(dir(os)), " dir(os): ", dir(os)
 ### The `callable ` function. ###
 The `callable ` function take any object and returns `True ` if the object can be called.
 
+Here is an example of the same.
+
+````python
+import string
+
+print "string.punctuation: ", string.punctuation, " callable(string.punctuation) : ", callable(string.punctuation)
+print "string.join: ", string.join, " callable(string.join) : ", callable(string.join)
+````
+
+### Built-In Function ###
+
+These functions which we have discussed till now and few more are grouped into a special module called `__builtin__`.
+
+* `type `
+* `str`
+* `dir`
+
+
+We can assume that python automatically executes `from __builtin__ import *` on startup.
