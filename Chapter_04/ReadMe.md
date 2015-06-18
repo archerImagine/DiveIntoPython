@@ -154,4 +154,72 @@ print 'getattr({},"clear"):', getattr({},"clear")
 print 'getattr((),"clear"):', getattr((),"clear")
 ````
 
+Now it will be very difficult to consume the above example, because we already know that list has a `pop ` method, and we pass the same `"pop" ` string in `getattr`, then what is the value add We are getting by using `getattr `?
 
+The answer to this will be simple.
+
+Lets say, we are taking input from user, for what methods to invoke on `li`. Consider the below example:-
+
+````python
+li = ['Larry', 'Curly']
+print "li.pop: ", li.pop
+methodName = str(raw_input("Enter the Method to be invoked: "))
+print getattr(li, methodName)
+print "li: ", li
+````
+
+Now the `methodName` will not be known in advance to the program, and also it will be a string object, on which we cannot invoke the method.
+
+If you are a C programmer, associate the `getattr` with function pointers.
+
+### `getattr ` as a dispatcher ###
+
+The best example of `getattr ` is that of a dispatcher. Consider the below example.
+
+If we have a program, which outputs its results in different formats, We can write different function to give output in different formats, and then use a single dispatch function `getattr` to execute the function.
+
+So to extend the above example, lets say we have 3 methods.
+
+* `ouput_html() ` : Outputs the result in html.
+* `output_xml() ` : Outputs the result in xml.
+* `output_text() ` : Plain text output.
+
+Now in which format to output is dependent on any of these:-
+
+* Command Line parameters.
+* Configuration file.
+
+So lets understand this by code.
+
+````python
+# example01
+def output_html():
+    print "Printing in html..."
+
+def output_xml():
+    print "Printing in xml..."  
+
+def output_text():
+    print "Printing in text..."
+````
+
+````python
+import example01
+
+def output(data, format='text'):
+    output_function = getattr(example12,'output_%s' %format)
+    return output_function()
+
+if __name__ == '__main__':  
+    format = str(raw_input("Enter the output format: "))
+    output("hello", format)
+````
+Now, we have two files, `example01` defines all the output format function, and we import this in another file, and when we run this program, it ask's the user for a output format, which is then converted to string and passed to `getattr`.
+
+If we did not had `getattr`, we would have written a dictionary to map all the keys to a function, or would have written multiple if else statement.
+
+Now there is a bug in the above code, suppose the user enters `ads` as an input, no we do not have a `output_ads` method in example01, and so it will raise a `AttributeError`.
+
+To solve this problem we can pass a default output type in `getattr`, which will be used, if the user does not passes a correct value.
+
+`output_function = getattr(example12,'output_%s' %format, example01.output_text)`
