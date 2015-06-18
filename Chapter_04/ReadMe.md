@@ -137,3 +137,21 @@ These functions which we have discussed till now and few more are grouped into a
 
 
 We can assume that python automatically executes `from __builtin__ import *` on startup.
+
+## Getting Object reference with `getattr` ##
+All functions in Python are objects. An important property of the function which can be used is, we can get a reference of a function without knowing its name until run-time by using `getattr ` function.
+
+Here are some example of `getattr() `.
+
+````python
+li = ['Larry', 'Curly']
+print "li.pop: ", li.pop
+print "getattr(li, 'pop') : ", getattr(li, 'pop')
+print "Append Using getattr: ", getattr(li,'append')('Moe')
+print "li: ", li
+
+print 'getattr({},"clear"):', getattr({},"clear")
+print 'getattr((),"clear"):', getattr((),"clear")
+````
+
+
