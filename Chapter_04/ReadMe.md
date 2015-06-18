@@ -94,4 +94,25 @@ print "str(horsemen): "+ str(horsemen)
 print "str(os): ", str(os)
 print "str(None): ", str(None)
 ````
+### The `dir ` Function ###
 
+The `dir ` returns a list of attributes and methods of any objects, modules, functions, strings, lists, dictionary.
+
+Consider the below example:-
+
+````python
+import os
+li = []
+print "Len: ", len(dir(li)), " dir(li): ", dir(li)
+d = {}
+print "Len: ", len(dir(d)), " dir(d): ", dir(d)
+print "Len: ", len(dir(os)), " dir(os): ", dir(os)
+````
+* `dir` returns a list with the name of the methods, not the actual methods.
+* `dir` when applied on modules, will return these property
+    - built-in attribute.
+    - methods.
+
+
+### The `callable ` function. ###
+The `callable ` function take any object and returns `True ` if the object can be called.
