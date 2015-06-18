@@ -78,3 +78,20 @@ print "type(os) == types.ModuleType : ", type(os) == types.ModuleType
 ````
 
 * `type ` can take any type of object.
+
+### The `str` Function ###
+The `str` function coerces data into string.
+
+Consider the below example:-
+
+````python
+import os
+
+print "str(1): ", str(1)
+horsemen = ['war', 'pestilence', 'famine']
+horsemen.append('PowerBuilder')
+print "str(horsemen): "+ str(horsemen)
+print "str(os): ", str(os)
+print "str(None): ", str(None)
+````
+
