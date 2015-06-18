@@ -56,3 +56,25 @@ def info(object,spacing=10, collapse=1):
 * For required arguments, if we use named arguments, then the order does not matter else it matters.
 
 The above concepts, looks very different, but once you realize that the function arguments is just a dictionary, then all of this makes real sense.
+
+
+## Using `type `, `str`, `dir ` and other Built-in Function. ##
+Python by design have a very limited built-in function, rest all functions are packaged into modules. This decision was mainly not to bloat the core language.
+
+### The `type ` Function ###
+
+The `type ` function returns the data type of any arbitrary object. All the possible types are listed in `types` modules.
+
+Consider the below example.
+
+
+````python
+import os,types
+
+print "type(1): ", type(1)
+print "type([]): ", type([])
+print "type(os): ", type(os)
+print "type(os) == types.ModuleType : ", type(os) == types.ModuleType
+````
+
+* `type ` can take any type of object.
