@@ -223,3 +223,45 @@ Now there is a bug in the above code, suppose the user enters `ads` as an input,
 To solve this problem we can pass a default output type in `getattr`, which will be used, if the user does not passes a correct value.
 
 `output_function = getattr(example12,'output_%s' %format, example01.output_text)`
+
+## Filtering List ##
+
+Python has a powerful capability of creating one list from another called list comprehension. This list comprehension can also have a filtering mechanism in which we do not select every element from original list to process.
+
+The general structure will look like this.
+
+* `[mapping-expression for element in source-list if filter-expression]`
+
+The first 2/3 part is already known to us, the only difference if from the `if` code. The filter-expression when evaluated to `True` will save the element in the new list.
+
+Consider the below for understanding the filtering concept.
+
+````python
+li = ['a','mpilgrim','foo','b','c','b','d','d']
+print "li", li
+
+newList = [elem for elem in li if len(elem) > 1]
+print "newList", newList
+
+newList = [elem for elem in li if elem != 'b']
+print "newList", newList
+
+newList = [elem for elem in li if li.count(elem) == 1]
+print "newList", newList
+````
+
+We have different `if` statement in the above code, which acts as a filter.
+
+* The first if, filters out any element whose length is > 1.
+* The second if, filters out element which do not begin with `b`
+* The last if is interesting, because it uses the list's count method, to remove duplicate from the original list. It not only remove the duplicate it even does not have a single entry of the duplicates in the new list.
+
+So now we are in a position to understand this piece of code from the first example.
+
+* `methodList = [method for method in dir(object) if callable(getattr(object, method))]`
+
+
+So here are the steps which is performed in the above line of code.
+
+1. `object ` is passed as a input to this.
+2. We find all the attributes and methods 
