@@ -265,3 +265,6 @@ So here are the steps which is performed in the above line of code.
 
 1. `object ` is passed as a input to this.
 2. We find all the attributes and methods 
+
+## `and` and `or` ##
+
