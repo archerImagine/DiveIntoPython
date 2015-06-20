@@ -268,3 +268,6 @@ So here are the steps which is performed in the above line of code.
 
 ## `and` and `or` ##
 
+### Using the `and-or` Trick ###
+
+
