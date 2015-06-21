@@ -270,4 +270,7 @@ So here are the steps which is performed in the above line of code.
 
 ### Using the `and-or` Trick ###
 
+## Using `lambda ` Expression ##
+
+
 
