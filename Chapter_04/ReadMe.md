@@ -266,7 +266,28 @@ So here are the steps which is performed in the above line of code.
 1. `object ` is passed as a input to this.
 2. We find all the attributes and methods 
 
-## `and` and `or` ##
+## The peculiar Nature of `and` and `or` ##
+In Python, `and` and `or` provide the logic operation, but the peculiar thing about the operation is that, it returns one of the value under the operation and not just a boolean value.
+
+When using `and` or `or` values are evaluated in boolean context, as a reason of this, `0`, `''`, `{}`, `()`, `[]` and `None` evaluates to false. 
+
+When using class, the object of a class is by default `True`, but we have some methods which can change the behavior to return `False`.
+
+Consider the below example for `and` :-
+
+* `'a' and 'b'`
+    - if all values are `True ` in boolean context, then `and` returns the last value.
+* `'' and 'b'`
+    - if any value is `False ` in boolean context, then `and` returns the first value.
+
+Consider the below example for `or` :-
+
+* `'a' or 'b'` 
+    - In case of `or` it evaluates from left to right and returns the value which is the first `True ` in the sequence.
+* `'' or [] or {}`
+    - If all values are `False `, `or` returns the last value. In above case it returns `{}`.
+* `or` evaluates only till it gets the first `True ` value so, if we have an expression or function after the `True ` value it will never gets executed.
+
 
 ### Using the `and-or` Trick ###
 
