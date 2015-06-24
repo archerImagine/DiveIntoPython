@@ -295,6 +295,9 @@ Consider the below example for `or` :-
 
 ### Real World `lambda ` Expression ###
 
+## Putting it together. ##
+
+
 
 
 
