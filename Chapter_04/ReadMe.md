@@ -297,6 +297,9 @@ Consider the below example for `or` :-
 
 ## Putting it together. ##
 
+## Summary ##
+
+
 
 
 
